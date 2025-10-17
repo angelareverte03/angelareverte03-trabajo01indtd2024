@@ -1,0 +1,22 @@
+---
+title: "Trabajo 1 - Soluciones"
+author: "Ángela Reverte Pagola"
+format: html
+editor: visual
+---
+
+## Ejercicio 1
+
+Aplicar los criterios de decisión bajo incertidumbre a los problemas cuya matriz de valores numéricos vienen dadas en las tablas siguientes: Realizar tanto en situación favorable como desfavorable.
+
+|     | e1  | e2  | e3  | e4  | e5  | e6  |
+|-----|-----|-----|-----|-----|-----|-----|
+| d1  | 740 | 800 | 500 | 250 | 690 | 900 |
+| d2  | 600 | 600 | 600 | 600 | 600 | 600 |
+| d3  | 120 | 50  | 90  | 300 | 250 | 10  |
+| d4  | 450 | 700 | 900 | 40  | 25  | 5   |
+| d5  | 150 | 200 | 500 | 220 | 430 | 400 |
+
+
+##Solución de beneficios
+
