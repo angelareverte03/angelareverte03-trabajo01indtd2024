@@ -5,6 +5,10 @@ format: html
 editor: visual
 ---
 
+```{r}
+source("teoriadecision_funciones_incertidumbre.R")
+```
+
 ## Ejercicio 1
 
 Aplicar los criterios de decisión bajo incertidumbre a los problemas cuya matriz de valores numéricos vienen dadas en las tablas siguientes: Realizar tanto en situación favorable como desfavorable.
@@ -17,6 +21,184 @@ Aplicar los criterios de decisión bajo incertidumbre a los problemas cuya matri
 | d4  | 450 | 700 | 900 | 40  | 25  | 5   |
 | d5  | 150 | 200 | 500 | 220 | 430 | 400 |
 
-
 ##Solución de beneficios
+
+```{r}
+tb01a = crea.tablaX(c(740,800,500,250,690,900,
+                      600,600,600,600,600,600,
+                      120,50,90,300,250,10,
+                      450,700,900,40,25,5,
+                      150,200,500,220,430,400),numalternativas=5,numestados=6)
+tb01a
+```
+
+Veámos las soluciones según los distintos criterios:
+
+1.  Criterio de Wald:
+
+```{r}
+criterio.Wald(tb01a)
+```
+
+El criterio de Wald nos indica que la mejor decisión es la alternativa d2 con un valor optimo de 600.
+
+
+
+
+2.  Método optimista:
+
+```{r}
+criterio.Optimista(tb01a)
+```
+
+El criterio optimista nos indica que la mejor decisión son las alternativas d1 o d4 con un valor optimo de 900.
+
+
+
+
+3.  Criterio de Hurwicz:
+
+```{r}
+criterio.Hurwicz(tb01a,alfa=0.5)
+```
+
+El criterio de Hurwicz nos indica que la mejor decisión para alpha=0.5 es la alternativa d2 con un valor optimo de 600.
+
+Además, moviendo el alpha:
+
+```{r}
+dibuja.criterio.Hurwicz_Intervalos(tb01a,T,T)
+```
+
+Nos indica que para alpha entre 0 y 0.538 la mejor decisión es d2 y para alpha entre 0.538 y 1, la mejor decisión es d1.
+
+
+
+
+4.  Criterio de Savage:
+
+```{r}
+criterio.Savage(tb01a)
+```
+
+El criterio de Savage nos indica que la mejor decisión es la alternativa d2 con un valor optimo de 300.
+
+
+
+
+5.  Criterio de Laplace:
+
+```{r}
+criterio.Laplace(tb01a)
+```
+
+El criterio de Laplace nos indica que la mejor decisión es la alternativa d1 con un valor optimo de 646.6667.
+
+
+
+
+6.  Criterio del Punto Ideal:
+
+```{r}
+criterio.PuntoIdeal(tb01a)
+```
+
+El criterio del Punto Ideal nos indica que la mejor decisión es la alternativa d2 con un valor optimo de 497.6947.
+
+CONCLUSIÓN:
+
+En situación favorable, según los criterios de decisión bajo incertidumbre, las mejores decisiones son la alternativa d2 (Criterio de Wald, Hurwicz, Savage y Punto Ideal) o la alternativa d1 (Criterio optimista y Laplace).
+
+Si me tuviera que quedar con una única alternativa, elegiría la alternativa d2, ya que es la que más veces aparece como mejor decisión según los distintos criterios.
+
+\pagebreak
+
+##Solución de costes:
+
+
+1.  Criterio de Wald:
+
+```{r}
+criterio.Wald(tb01a,favorable = FALSE)
+```
+
+El criterio de Wald nos indica que la mejor decisión es la alternativa d3 con un valor optimo de 300.
+
+
+
+
+2.  Método optimista:
+
+```{r}
+criterio.Optimista(tb01a,favorable = FALSE)
+```
+
+El criterio optimista nos indica que la mejor decisión es la alternativa d4 con un valor optimo de 5.
+
+
+
+
+3.  Criterio de Hurwicz:
+
+```{r}
+criterio.Hurwicz(tb01a,alfa=0.5,favorable = FALSE)
+```
+
+El criterio de Hurwicz nos indica que la mejor decisión para alpha=0.5 es la alternativa d3 con un valor optimo de 155.
+
+Además, moviendo el alpha:
+
+```{r}
+dibuja.criterio.Hurwicz_Intervalos(tb01a,F,T)
+```
+
+Nos indica que para alpha entre 0 y 0.992 la mejor decisión es d3 y para alpha entre 0.992 y 1, la mejor decisión es d4.
+
+
+
+
+4.  Criterio de Savage:
+
+```{r}
+criterio.Savage(tb01a,favorable = FALSE)
+```
+
+El criterio de Savage nos indica que la mejor decisión es la alternativa d3 con un valor optimo de 260.
+
+
+
+
+5.  Criterio de Laplace:
+
+```{r}
+criterio.Laplace(tb01a,favorable = FALSE)
+```
+
+El criterio de Laplace nos indica que la mejor decisión es la alternativa d1 con un valor optimo de 646.6667.
+
+
+
+
+6.  Criterio del Punto Ideal:
+
+```{r}
+criterio.PuntoIdeal(tb01a,favorable = FALSE)
+```
+
+El criterio del Punto Ideal nos indica que la mejor decisión es la alternativa d3 con un valor optimo de 343.875.
+
+CONCLUSIÓN:
+
+En situación de costes, según los criterios de decisión bajo incertidumbre, las mejores decisiones son la alternativa d3 (Criterio de Wald, Hurwicz, Savage y Punto Ideal), la alternativa d4 (Criterio optimista) o la alternativa d1 (Criterio de Laplace).
+
+Si me tuviera que quedar con una única alternativa, elegiría la alternativa d3, ya que es la que más veces aparece como mejor decisión según los distintos criterios.
+
+
+
+
+
+
+
+
+
 
