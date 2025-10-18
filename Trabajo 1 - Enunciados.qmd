@@ -31,8 +31,8 @@ Opción A: Alquilar furgoneta y hacerlo ellos
 • Si el ascensor del piso nuevo falla, necesitarían 3 horas extra y pedir ayuda puntual 30 € para subir los muebles pesados.
 
 Opción B: Empresa “AhorraMudanzas” 
-• Tarifa base 2 horas: 150 € (furgón y carga/descarga básicos).
-• Hora extra: 40 €.
+• Tarifa base 2 horas: 130 € (furgón y carga/descarga básicos).
+• Hora extra: 35 €.
 • Con lluvia o tráfico, suelen tardar 1 hora más.
 • Si el ascensor está averiado, estiman 2 horas extra y recargo 20 € por subir por escaleras.
 
@@ -48,9 +48,7 @@ Mudanza fluida (sin lluvia/tráfico y ascensores funcionando).
 
 Lluvia o tráfico moderado.
 
-Ascensor averiado en destino.
-
-
+Ascensor averiado.
 
 
 
